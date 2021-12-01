@@ -34,10 +34,12 @@ if($cnt == 0) {
             $sql->bindValue(7, htmlspecialchars(500), PDO::PARAM_STR);
             $sql->execute();
         } else {
-            echo 'アップロードに失敗しました。';
+            $message='商品の登録失敗';
+            $flg=1;
         }
     } else {
-        echo 'ファイルを選択してください。';
+        $message='商品の登録失敗';
+        $flg=1;
     }
 
     //管理画面に画像を保存
@@ -48,10 +50,12 @@ if($cnt == 0) {
         $file = 'img/'.basename($_FILES['file']['name']);
         if (move_uploaded_file($_FILES['file']['tmp_name'], $file)) {
         } else {
-            echo 'アップロードに失敗しました。';
+            $message='商品の登録失敗';
+            $flg=1;
         }
     } else {
-        echo 'ファイルを選択してください。';
+        $message='商品の登録失敗';
+        $flg=1;
     }
 }else{
     $message='商品の登録失敗';
@@ -69,8 +73,8 @@ if($cnt == 0) {
 </head>
 <body>
 <header class="header">
-        <a href="management.php"><img src="img/header_name.png" alt="ヘッダー画像" class="header_name"></a>
-        <p class="head_border"></p>
+    <a href="management.php"><img src="img/header_name.png" alt="ヘッダー画像" class="header_name"></a>
+    <p class="head_border"></p>
 </header>
 <?php
 
