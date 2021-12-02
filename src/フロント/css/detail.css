@@ -1,0 +1,65 @@
+/*merchandise_detail.php*/
+.header_log{
+    margin-left: 27%;
+    height: 130px;
+}
+.head_border{
+    border-bottom: 2px solid black;
+}
+.merchandise_name{
+    text-align: center;
+}
+.image_img{
+    width: 60%;
+    height: 60%;
+    margin-left: 20%;
+
+}
+.price,.detail,.quantity{
+    padding-left: 10px;
+    border-left: 2px solid black;
+    margin-left: 10%;
+    font-size: 20px;
+}
+.detail_contents{
+    width: 80%;
+    margin-left: 15%;
+    font-size: 20px;
+}
+.select_quantity{
+    margin-left: 10%;
+    width: 100px;
+}
+.cart_btn{
+    float: right;
+    margin-right: 20%;
+}
+.cart_btn,.top_btn{
+    border: 1px solid black;
+    background-color: white;
+    padding: 15px 30px;
+}
+.cart_btn:hover,.top_btn:hover{
+    background-color: black;
+    color: white;
+}
+.top_btn{
+    margin-left: 20%;
+    margin-bottom: 50px;
+}
+@media only screen and (max-width: 800px){
+    .header_log{
+        margin-left: 2.5%;
+    }
+    .image_img{
+        width: 45%;
+        height: 45%;
+        margin-left: 30%;
+    }
+}
+
+
+
+
+
+
